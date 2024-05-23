@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<style>
+
+    body{
+        margin: 0;
+       padding: 0; 
+       overflow: hidden;
+       background-image: url("Images/addstockImg.jpg");
+       background-size: cover;
+    }
+
+#mainDiv{
+        position: absolute;
+        height: fit-content;
+    }
+
+    #navbarDiv{
+        position: relative;
+        background-color: rgb(32, 75, 77);
+        width: 100vw;
+        height: 10vh;
+    }
+
+    #home{
+        position: absolute;
+        color: aliceblue;
+        left: 10%;
+        top: 20px;
+        text-decoration: none;
+        
+    }
+    #home:hover{
+        color: cadetblue;
+    }
+
+
+    #form{
+        position: relative;
+        background-color: cadetblue;
+        left: 25%;
+        width: 45vw;
+        height: 80vh;
+        top: 15px;
+        border-radius: 8px;
+        box-shadow: 5px 5px 5px 0px gray;
+        
+    }
+
+    #content{
+        position: relative;
+        left: 10%;
+    }
+
+    #Name{
+        position: absolute;
+        width: 25vw;
+        height: 5vh;
+        left: 20%;
+    }
+
+    #password{
+        position: relative;
+        width: 25vw;
+        height: 5vh;
+        left: 17px;
+    }
+
+	#empId{
+	    	position: relative;
+	        width: 25vw;
+	        height: 5vh;
+	        left: 17px;
+	    }
+
+    #dob{
+        position: relative;
+        width: 25vw;
+        height: 5vh;
+        left: 69px;
+    }
+    #dob:hover{
+        cursor: pointer;
+    }
+
+    #address{
+        position: relative;
+        left: 45px;
+    }
+
+    #submit{
+        position: relative;
+        width: 15%;
+        left: 25%;
+        border-radius: 5px;
+    }
+    #submit:hover{
+        cursor: pointer;
+        background-color: rgb(21, 105, 63);
+        box-shadow: 3px 3px 0px 0px #756c6c;
+    }
+
+    #reset{
+        position: relative;
+        width: 15%;
+        left: 30%;
+        border-radius: 5px;
+    }
+    #reset:hover{
+        cursor: pointer;
+       background-color: red;
+       box-shadow: 3px 3px 0px 0px #756c6c;
+    }
+    
+    
+
+</style>
+<body>
+
+    <div id="mainDiv">
+        <div id="navbarDiv">
+            <nav>
+                <a id="home" >Home</a>
+            </nav>
+        </div>
+   <div id="form">
+            <br/>
+            <center><h1><font color="black">Registration Form</font></h1></center>
+            <br/>
+            <br/>
+
+    <form id="content" action="FirstServlet" method="get" >
+        <label  for="fname">FirstName : </label>
+        <input type="text" id="Name" name="Name" placeholder="Enter Your First Name" required="required"/>
+        <br/>
+        <br/>
+
+        <label for="password">Set Password : </label>
+        <input type="password" placeholder="Enter Password" id="password" required="required">
+        <br/>
+        <br/>
+        
+        <label for="id">Employee ID : </label>
+        <input type="number" name="EmpId" placeholder="Enter Your ID" id="empId" min="0" required="required" /> 
+        <br/>
+        <br/>
+
+        <label for="dob">DOB : </label>
+        <input type="date" name="DOB" id="dob" required="required" min="2000-01-01">
+        <br/>
+        <br/>
+
+        <label for="address">Address : </label>
+        <textarea id="address"></textarea>
+        <br/>
+        <br/>
+
+        <label for="gender">Gender : </label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br/>
+        <br/>
+		<input type="submit"  id="submit" name="Submit" value="SUBMIT"/>
+
+        <label for="reset"></label>
+        <input type="reset" id="reset" value="Reset">
+
+    </form>
+   
+        </div>
+    </div>
+
+    
+</body>
+</html>
